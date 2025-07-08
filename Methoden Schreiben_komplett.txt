@@ -1,0 +1,614 @@
+Ohne Rückgabewert (void), mit oder ohne Parameter:
+
+
+// 1.	void Begruesse()
+// Gibt "Hallo Welt!" auf der Konsole aus.
+
+public static void Begruesse() {
+	Console.WriteLine("Hallo Welt!");
+}
+
+
+//2.	void BegruesseMitNamen(string name)
+// Gibt "Hallo, [Name]!" aus.
+
+public static void BegruesseMitNamen(string name) {
+	Console.WriteLine("Hallo" + name + "!");
+}
+
+
+// 3.	void ZeichneLinie()
+// Gibt eine Trennlinie wie ---------------- aus.
+
+public static void ZeichneLinie() {
+	Console.WriteLine("----------------");
+}
+
+
+// 4.	void ZeigeAktuellesDatum()
+// Gibt das heutige Datum aus.
+
+public static void ZeigeAktuellesDatum() {
+	Console.WriteLine(DateTime.Today.ToString("dd.MM.yyyy"));
+}
+
+
+// 5.	void ZeigeAlter(int geburtsjahr)
+Berechnet das Alter auf Basis des Geburtsjahres und gibt es aus.
+
+public static void ZeigeAlter(int geburtsjahr) {
+
+    int aktuellesJahr = DateTime.Today.Year;
+    int alter = aktuellesJahr - geburtsjahr;
+	
+    Console.WriteLine("Alter: " + alter);
+}
+
+
+// 6.	void ZeigeMultiplikationstabelle(int zahl)
+Gibt die 1erâ€“10er-Reihe der Zahl aus.
+
+public static void ZeigeMultiplikationstabelle(int zahl) {
+    for (int i = 1; i <= 10; i++) {
+        Console.WriteLine($"{zahl} x {i} = {zahl * i}");
+    }
+}
+
+
+// 7.	void SchreibeSpruch()
+// Gibt einen motivierenden Spruch aus.
+
+public static void SchreibeSpruch() {
+    Console.WriteLine("Wir haben so vieles geschafft! Wir schaffen das!");
+}
+
+
+// 8.	void WiederholeText(string text, int anzahl)
+// Gibt den Text mehrfach aus.
+
+public static void WiederholeText(string text, int anzahl) {
+    for (int i = 0; i < anzahl; i++) {
+        Console.WriteLine(text);
+    }
+}
+
+
+// 9.	void ZeigeMenue()
+// Gibt ein einfaches Menü aus (z.B. Auswahl A/B/C).
+
+public static void ZeigeMenue() {
+    Console.WriteLine("=== Menü ===");
+    Console.WriteLine("A) Neues Spiel starten");
+    Console.WriteLine("B) Spiel laden");
+    Console.WriteLine("C) Beenden");
+    Console.Write("Bitte wählen Sie A, B oder C: ");
+}
+
+
+// 10.	void BegruesseMehrfach(string name, int wieOft)
+//Gibt die Begruessung mehrfach aus.
+
+public static void BegruesseMehrfach(string name, int wieOft) {
+    for (int i = 0; i < wieOft; i++) {
+        Console.WriteLine("Hallo " + name + "!");
+    }
+}
+
+
+***
+
+
+Mit Rückgabewert:
+
+
+// 11.	int Addiere(int a, int b)
+// Gibt die Summe zurÃ¼ck.
+
+public static int Addiere(int a, int b) {
+    int ergebnis = a + b;
+    return ergebnis;
+}
+
+
+// 12.	int Subtrahiere(int a, int b)
+// Gibt die Differenz zurück.
+
+public static int Subtrahiere(int a, int b) {
+    int ergebnis = a - b;
+    return ergebnis;
+}
+
+
+// 13.	int Quadrat(int x)
+// Gibt x * x zurück.
+
+public static int Quadrat(int x) {
+    int ergebnis = x * x;
+    return ergebnis;
+}
+
+
+// 14.	bool IstGerade(int zahl)
+// Prüft, ob die Zahl gerade ist.
+
+public static bool IstGerade(int zahl) {
+    return zahl % 2 == 0;
+}
+
+
+// 15.	bool IstNegativ(int zahl)
+// Gibt true zurück, wenn die Zahl kleiner als 0 ist.
+
+public static bool IstNegativ(int zahl) {
+    return zahl < 0;
+}
+
+
+// 16.	string GibBegruessung()
+// Gibt einen BegrÃ¼ÃŸungstext zurÃ¼ck.
+
+public static string GibBegruessung() {
+    string Beg = "Hi!";
+	return Beg;
+}
+
+
+// 17.	double BerechneFlaecheRechteck(double breite, double hoehe)
+// Gibt die FlÃ¤che eines Rechtecks zurÃ¼ck.
+
+public static double BerechneFlaecheRechteck(double breite, double hoehe) {
+	double flaeche = breite * hoehe;
+	return flaeche;
+}
+
+
+// 18.	double CelsiusZuFahrenheit(double celsius)
+// Rechnet Celsius in Fahrenheit um.
+
+public static double CelsiusZuFahrenheit(double celsius) {
+    double fahrenheit = (celsius * 9.0 / 5.0) + 32;
+    return fahrenheit;
+}
+
+
+// 19.	bool IstVokal(char buchstabe)
+// Gibt true zurück, wenn es ein Vokal ist.
+
+public static bool IstVokal(char buchstabe)
+{
+    // Wir wandeln den Buchstaben in Kleinbuchstaben um, um GroÃŸ-/Kleinschreibung zu ignorieren
+    buchstabe = char.ToLower(buchstabe);
+
+    // Dann prüfen wir, ob er zu den deutschen Vokalen gehÃ¶rt
+    return buchstabe == 'a' || buchstabe == 'e' || buchstabe == 'i' || buchstabe == 'o' || buchstabe == 'u';
+}
+
+
+// 20.	int Maximum(int a, int b)
+// Gibt die grÃ¶ÃŸere Zahl zurück.
+
+public static int Maximum(int a, int b)
+{
+	int maximum = 0;
+	
+	if(a > b) {
+		maximum = a;
+	}
+	else {
+	maximum = b;
+	}
+	
+    return maximum;
+}
+
+
+// 21.	int Minimum(int a, int b)
+// Gibt die kleinere Zahl zurÃ¼ck.
+
+public static int Minimum(int a, int b)
+{
+	int minimum = 0;
+	
+	if(a < b) {
+		minimum = a;
+	}
+	else {
+		minimum = b;
+	}
+	
+    return minimum;
+}
+
+
+// 22.	string ErmittleNote(int punkte)
+// Gibt z.B. "Sehr gut", "Gut", etc. je nach Punkte zurÃ¼ck.
+
+public static string ErmittleNote(int punkte)
+{
+	string note = "";
+	
+	if (punkte >= 92) {
+		note = "Sehr gut";
+	}
+	else if (punkte >= 81) {
+		note = "Gut";
+	}
+	else if (punkte >= 67) {
+		note = "Befriedigend";
+	}
+	
+	else if (punkte >= 50) {
+	note = "Ausreichend";
+	}
+	else if (punkte >= 30) {
+		note = "Mangelhaft";
+	}
+	else {
+		note = "UngenÃ¼gend";
+	}
+	
+    return note;
+	
+}
+
+
+// 23.	string IstVolljaehrig(int alter)
+// Gibt "ja" oder "nein" zurÃ¼ck.
+
+public static string IstVolljaehrig(int alter)
+{
+	string volljaehrig = "";
+	
+	if(alter >= 18) {
+		volljaehrig = "ja";
+	}
+	else {
+		volljaehrig = "nein";
+	}
+	
+    return volljaehrig;
+	
+}
+
+
+// 24.	bool IstSchaltjahr(int jahr)
+// Gibt true zurück, wenn das Jahr ein Schaltjahr ist.
+
+public static bool IstSchaltjahr(int jahr) {
+    return DateTime.IsLeapYear(jahr);
+}
+
+
+// 25.	string FormatiereName(string vorname, string nachname)
+// Gibt den vollen Namen in bestimmtem Format zurück.
+
+public static string FormatiereName(string vorname, string nachname) {
+	string formatiererName = vorname + " " + nachname;
+    return formatiererName.ToUpper();
+}
+
+
+// 26.	int ZeichenZaehlen(string text)
+// Zählt die Anzahl Zeichen im Text.
+
+public static int ZeichenZaehlen(string text) {
+	int zeichenAnzahl = text.Length;
+    return zeichenAnzahl;
+}
+
+
+// 27.	bool EnthältZahl(string eingabe)
+// Gibt true zurück, wenn im Text eine Ziffer vorkommt.
+
+public static bool EnthältZahl(string eingabe) {
+    return eingabe.Any(char.IsDigit);
+}
+
+
+// 28.	string SpiegelText(string text)
+// Gibt den umgekehrten Text zurück.
+
+public static string SpiegelText(string text) {
+    return new string(text.Reverse().ToArray());
+}
+
+
+// 29.	int Würfeln()
+// Gibt eine Zufallszahl zwischen 1 und 6 zurück.
+
+public static int Würfeln() {
+	Random random = new Random();
+	int Zufallszahl = random.Next(1, 7);
+    return Zufallszahl;
+}
+
+
+// 30.	double Durchschnitt(double zahl1, double zahl2, double zahl3)
+// Gibt den Durchschnitt der drei Zahlen zurück.
+
+public static double Durchschnitt(double zahl1, double zahl2, double zahl3) {
+	double durchschnitt = (zahl1 + zahl2 + zahl3) / 3;
+    return durchschnitt;
+}
+
+
+***
+
+
+1. Quadratzahl berechnen
+
+Aufgabenstellung:
+Schreiben Sie eine Methode in C#,
+die eine Ganzzahl entgegennimmt und deren Quadrat zurückgibt.
+
+public static int zumQuadrat(int x) {
+	return x * x;
+}
+
+
+2. Temperatur umrechnen (Celsius zu Fahrenheit)
+
+Aufgabenstellung:
+
+Schreiben Sie eine Methode,
+die eine Temperatur in Celsius als Parameter erhält
+und den entsprechenden Fahrenheit-Wert zurückgibt.
+
+(Formel: F = C * 1.8 + 32)
+
+public static double celsiusToFahrenheit(double C) {
+	return C * 1.8 + 32;
+}
+
+
+3. Umfang eines Kreises
+
+Aufgabenstellung:
+
+Erstellen Sie eine Methode in C#,
+die den Radius eines Kreises übergeben bekommt und den Umfang berechnet.
+
+(Formel: U = 2 * p * r)
+
+public static double umfangBerechnen(double r) {
+	return 2 * Math.PI * r;
+}
+
+
+4. Durchschnitt berechnen
+
+Aufgabenstellung:
+
+Schreiben Sie eine Methode,
+die drei double-Werte als Parameter erhält und deren Durchschnitt zurückgibt.
+
+public static double Durchschnitt(double zahl1, double zahl2, double zahl3) {
+	double durchschnitt = (zahl1 + zahl2 + zahl3) / 3;
+    return durchschnitt;
+}
+
+
+5. Gerade oder ungerade?
+
+Aufgabenstellung:
+
+Erstellen Sie eine Methode,
+die prüft, ob eine gegebene Ganzzahl gerade oder ungerade ist,
+und true bzw. false zurückgibt.
+
+public static bool geradeOderUngerade(int x) {
+    return x % 2 == 0;
+}
+
+
+6. Schaltjahrprüfung
+
+Aufgabenstellung:
+
+Schreiben Sie eine Methode,
+die eine Jahreszahl als Parameter erhält und überprüft,
+ob es sich um ein Schaltjahr handelt.
+
+(Hinweis: Ein Jahr ist ein Schaltjahr,
+wenn es durch 4 teilbar ist, aber nicht durch 100
+außer es ist auch durch 400 teilbar.)
+
+
+public static bool schaltjahrPrüfung(int x) {
+    return x % 4 == 0 && x % 100 != 0 || x % 400 == 0;
+}
+
+
+7. String umdrehen
+
+Aufgabenstellung:
+
+Erstellen Sie eine Methode,
+die einen String entgegennimmt und ihn umgekehrt (rückwärts) zurückgibt.
+
+public static string stringRückwärts(string text) {
+	char[] chars = text.ToCharArray();
+	Array.Reverse(chars);
+	string umgedreht = new string(chars);
+    return umgedreht;
+}
+
+
+8. Prozentwert berechnen
+
+Aufgabenstellung:
+
+Schreiben Sie eine Methode,
+die einen Grundwert und einen Prozentsatz erhält und den Prozentwert berechnet.
+
+(Beispiel: 20% von 150 = 30)
+
+public static double ProzentwertBerechnen( double GW, double PS ) {
+	double PW = GW * PS / 100;
+	return PW;
+}
+
+
+9. Potenz berechnen
+
+Aufgabenstellung:
+
+Erstellen Sie eine Methode,
+die zwei Zahlen (Basis und Exponent) als Parameter entgegennimmt
+und die Potenz berechnet.
+
+public static double PotenzBerechnen(double basis, double exponent) {
+
+	double P = 1;
+	for (int i = 0; i < exponent; i++) {
+		P = P * basis;
+	}
+	return P;
+}
+
+
+10. Netto-Preis berechnen
+
+Aufgabenstellung:
+
+Schreiben Sie eine Methode,
+die einen Brutto-Preis und die Mehrwertsteuer
+(z. B. 19%) entgegennimmt und den Netto-Preis zurückgibt.
+
+public static double NettoPreisBerechnen (double BruttoPreis, double Mehrwertsteuer) {
+	return BruttoPreis / (1 + Mehrwertsteuer / 100);
+}
+
+
+1. Summe eines Arrays
+
+Aufgabenstellung: Schreiben Sie eine Methode,
+die ein Array von int-Werten erhält und die Summe aller Elemente zurückgibt.
+
+public static int SummeIntArray( int[] zahlen ) {
+	int Summe = 0;
+	for (int i = 0; i <= zahlen.Length -1 ; i++)
+	{
+		Summe = Summe + zahlen[i];
+	}
+	return Summe;
+}
+
+
+2. Durchschnitt berechnen
+
+Aufgabenstellung: Erstellen Sie eine Methode,
+die ein Array von double erhält und den Durchschnitt der Werte berechnet.
+
+public static double DurchschnittDoubleArray( double[] zahlen ) {
+	double Durchschnitt = 0;
+	for (int i = 0; i <= zahlen.Length -1 ; i++)
+	{
+		Durchschnitt = Durchschnitt + zahlen[i];
+	}
+	return Durchschnitt / zahlen.Length;
+}
+
+
+3. Maximalen Wert finden
+
+Aufgabenstellung: Schreiben Sie eine Methode,
+die den größten Wert in einem int-Array zurückgibt.
+
+// Variante 1
+public static int groeßtenWertIntArray( int[] zahlen ) {
+	return Array.Max(zahlen);
+}
+
+// Variante 2
+public static int groeßtenWertIntArray( int[] zahlen ) {
+
+	int groeßtenWertIntArray = zahlen[0];
+	for (int i = 0; i <= zahlen.Length -1 ; i++)
+	{
+		if ( zahlen[i] > groeßtenWertIntArray  )
+		{
+			groeßtenWertIntArray = zahlen[i];
+		}
+	}
+	return groeßtenWertIntArray;
+}
+
+
+4. Zählen, wie oft ein Wert vorkommt
+
+Aufgabenstellung: Erstellen Sie eine Methode,
+die ein Array und einen Suchwert erhält und zählt,
+wie oft dieser Wert im Array vorkommt.
+
+public static int DoppelteGanzzahlenZaeheln (int[] zahlen, int suchwert) {
+	int AnzahlSuchwert = 0;
+	for (int i = 0; i <= zahlen.Length - 1; i++)
+	{
+		if ( zahlen[i] ==  suchwert )
+		{
+			AnzahlSuchwert = AnzahlSuchwert + 1;
+		}
+	}
+	return AnzahlSuchwert;
+}
+
+
+
+
+
+5. Alle geraden Zahlen ausgeben
+
+Aufgabenstellung: Schreiben Sie eine Methode,
+die alle geraden Zahlen aus einem Array von Ganzzahlen
+herausfiltert und in einem neuen Array zurückgibt.
+
+
+public static int[] GeradeZahlenAusIntarrayFiltern (int[] zahlen) {
+
+	int[] GeradeZahlen = new int[zahlen.Length];
+	
+	for (int i = 0; i <= zahlen.Length - 1; i++)
+	{
+	
+
+		
+	}
+	
+	return GeradeZahlen;
+}
+
+
+
+
+
+?? 6. Array umkehren
+Aufgabenstellung:
+Schreiben Sie eine Methode, die ein Array von int-Werten umdreht (erstes Element wird letztes usw.).
+________________________________________
+?? 7. Werte verdoppeln
+Aufgabenstellung:
+Schreiben Sie eine Methode, die ein Array von int erhält und ein neues Array zurückgibt, in dem jeder Wert verdoppelt wurde.
+________________________________________
+?? 8. Werte in umgekehrter Reihenfolge ausgeben (ohne Array zu ändern)
+Aufgabenstellung:
+Schreiben Sie eine Methode, die ein Array von Zeichen (char[]) in umgekehrter Reihenfolge auf der Konsole ausgibt, ohne das Array selbst zu verändern.
+________________________________________
+?? 9. Prüfen, ob ein Array sortiert ist
+Aufgabenstellung:
+Erstellen Sie eine Methode, die prüft, ob ein int-Array aufsteigend sortiert ist.
+________________________________________
+?? 10. Zwei Arrays vergleichen
+Aufgabenstellung:
+Schreiben Sie eine Methode, die zwei Arrays erhält und prüft, ob sie inhaltlich gleich sind (gleiche Länge, gleiche Werte in gleicher Reihenfolge).
+
+
+
+
+
+
+
+
+
+
+
